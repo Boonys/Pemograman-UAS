@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produk - Parfum Store</title>
+    <link rel="stylesheet" href="produk.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>UhuyStore</h2>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="home.html" class="nav-link">Home</a></li>
+                <li><a href="products.html" class="nav-link active">Produk</a></li>
+                <li><a href="home.html#contact" class="nav-link">Kontak</a></li>
+                <li><a href="home.html#profile" class="nav-link">Profile</a></li>
+                <li><a href="index.html" class="nav-link logout">Logout</a></li>
+            </ul>
+            <div class="cart-icon">
+                🛒 <span id="cart-count">0</span>
+            </div>
+        </div>
+    </nav>
+
+    <section class="products-hero">
+        <div class="container">
+            <h1>Koleksi Parfum Premium</h1>
+            <p>Temukan aroma yang tepat untuk setiap momen spesial Anda</p>
+        </div>
+    </section>
+
+    <section class="filter-section">
+        <div class="container">
+            <div class="filters">
+                <button class="filter-btn active" data-category="all">Semua</button>
+                <button class="filter-btn" data-category="floral">Floral</button>
+                <button class="filter-btn" data-category="fresh">Fresh</button>
+                <button class="filter-btn" data-category="woody">Woody</button>
+                <button class="filter-btn" data-category="oriental">Oriental</button>
+            </div>
+            <div class="search-box">
+                <input type="text" placeholder="Cari parfum..." id="searchInput">
+                <button>🔍</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="products-section">
+        <div class="container">
+            <div class="products-grid" id="productsGrid">
+                <!-- Floral Products -->
+                <div class="product-card" data-category="floral">
+                    <div class="product-image">🌹</div>
+                    <div class="product-info">
+                        <h3>Zonlitch</h3>
+                        <p class="category">Floral</p>
+                        <p class="description">Keharuman bunga sakura yang lembut dan romantis </p>
+                        <div class="rating">⭐⭐⭐⭐⭐ (4.8)</div>
+                        <div class="price">Rp 75.000</div>
+                        <button class="add-to-cart" onclick="addToCart('Rose Elegance', 75000)">
+                            Tambah ke Keranjang
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="floral">
+                    <div class="product-image">🌸</div>
+                    <div class="product-info">
+                        <h3>Edelman</h3>
+                        <p class="category">Floral</p>
+                        <p class="description">Aroma Vanilla klasik yang elegan dan memikat hati</p>
+                        <div class="rating">⭐⭐⭐⭐⭐ (4.9)</div>
+                        <div class="price">Rp 75.000</div>
+                        <button class="add-to-cart" onclick="addToCart('Cherry Blossom', 75000)">
+                            Tambah ke Keranjang
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="floral">
+                    <div class="product-image">🌺</div>
+                    <div class="product-info">
+                        <h3>Klapfrozen</h3>
+                        <p class="category">Floral</p>
+                        <p class="description">Kemewahan melati yang menawan dan sensual</p>
+                        <div class="rating">⭐⭐⭐⭐⭐ (4.7)</div>
+                        <div class="price">Rp 75.000</div>
+                        <button class="add-to-cart" onclick="addToCart('Jasmine Dream', 75000)">
+                            Tambah ke Keranjang
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Fresh Products -->
+                <div class="product-card" data-category="fresh">
+                    <div class="product-image">🍋</div>
+                    <div class="product-info">
+                        <h3>Citrus Burst</h3>
+                        <p class="category">Fresh</p>
+                        <p class="description">Kesegaran jeruk yang menyegarkan sepanjang hari</p>
+                        <div class="rating">⭐⭐⭐⭐⭐ (4.6)</div>
+                        <div class="price">Rp 50.000</div>
+                        <button class="add-to-cart" onclick="addToCart('Citrus Burst', 50000)">
+                            Tambah ke Keranjang
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="fresh">
+                    <div class="product-image">🌊</div>
+                    <div class="product-info">
+                        <h3>Ocean Breeze</h3>
+                        <p class="category">Fresh</p>
+                        <p class="description">Hembusan angin laut yang menyegarkan jiwa</p>
+                        <div class="rating">⭐⭐⭐⭐⭐ (4.5)</div>
+                        <div class="price">Rp 65.000</div>
+                        <button class="add-to-cart" onclick="addToCart('Ocean Breeze', 65000)">
+                            Tambah ke Keranjang
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="fresh">
+                    <div class="product-image">🌿</div>
+                    <div class="product-info">
+                        <h3>Mint Fresh</h3>
+                        <p class="category">Fresh</p>
+                        <p class="description">Kesegaran mint yang memberikan energi positif</p>
+                        <div class="rating">⭐⭐⭐⭐⭐ (4.4)</div>
+                        <div class="price">Rp 90.000</div>
+                        <button class="add-to-cart" onclick="addToCart('Mint Fresh', 90000)">
+                            Tambah ke Keranjang
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Woody Products -->
+                <div class="product-card" data-category="woody">
+                    <div class="product-image">🌳</div>
+                    <div class="product-info">
+                        <h3>Sandalwood Elite</h3>
+                        <p class="category">Woody</p>
+                        <p class="description">Kemewahan kayu cendana yang hangat dan maskulin</p>
+                        <div class="rating">⭐⭐⭐⭐⭐ (4.8)</div>
+                        <div class="price">Rp 55.000</div>
+                        <button class="add-to-cart" onclick="addToCart('Sandalwood Elite', 55000)">
+                            Tambah ke Keranjang
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="woody">
+                    <div class="product-image">🍂</div>
+                    <div class="product-info">
+                        <h3>Cedar Wood</h3>
+                        <p class="category">Woody</p>
+                        <p class="description">Aroma kayu cedar yang kuat dan berkelas</p>
+                        <div class="rating">⭐⭐⭐⭐⭐ (4.7)</div>
+                        <div class="price">Rp 60.000</div>
+                        <button class="add-to-cart" onclick="addToCart('Cedar Wood', 60000)">
+                            Tambah ke Keranjang
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Oriental Products -->
+                <div class="product-card" data-category="oriental">
+                    <div class="product-image">🌙</div>
+                    <div class="product-info">
+                        <h3>Arabian Nights</h3>
+                        <p class="category">Oriental</p>
+                        <p class="description">Kemisteriusan timur tengah yang mempesona</p>
+                        <div class="rating">⭐⭐⭐⭐⭐ (4.9)</div>
+                        <div class="price">Rp 75.000</div>
+                        <button class="add-to-cart" onclick="addToCart('Arabian Nights', 75000)">
+                            Tambah ke Keranjang
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="oriental">
+                    <div class="product-image">🌟</div>
+                    <div class="product-info">
+                        <h3>Golden Spice</h3>
+                        <p class="category">Oriental</p>
+                        <p class="description">Perpaduan rempah emas yang eksotis dan mewah</p>
+                        <div class="rating">⭐⭐⭐⭐⭐ (4.6)</div>
+                        <div class="price">Rp 70.000</div>
+                        <button class="add-to-cart" onclick="addToCart('Golden Spice', 70000)">
+                            Tambah ke Keranjang
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="oriental">
+                    <div class="product-image">🔥</div>
+                    <div class="product-info">
+                        <h3>Amber Passion</h3>
+                        <p class="category">Oriental</p>
+                        <p class="description">Kehangatan amber yang penuh gairah</p>
+                        <div class="rating">⭐⭐⭐⭐⭐ (4.8)</div>
+                        <div class="price">Rp 80.000</div>
+                        <button class="add-to-cart" onclick="addToCart('Amber Passion', 80000)">
+                            Tambah ke Keranjang
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shopping Cart Modal -->
+    <div id="cartModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Keranjang Belanja</h2>
+            <div id="cartItems"></div>
+            <div class="cart-total">
+                <h3>Total: Rp <span id="totalPrice">0</span></h3>
+                <button class="checkout-btn">Checkout</button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p>@ghniarusll</p>
+        </div>
+    </footer>
+
+    <script>
+        let cart = [];
+        let cartCount = 0;
+
+        // Filter functionality
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const productCards = document.querySelectorAll('.product-card');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Remove active class from all buttons
+                filterBtns.forEach(b => b.classList.remove('active'));
+                // Add active class to clicked button
+                btn.classList.add('active');
+
+                const category = btn.dataset.category;
+                
+                productCards.forEach(card => {
+                    if (category === 'all' || card.dataset.category === category) {
+                        card.style.display = 'block';
+                        card.style.animation = 'fadeIn 0.5s ease';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Search functionality
+        const searchInput = document.getElementById('searchInput');
+        searchInput.addEventListener('input', (e) => {
+            const searchTerm = e.target.value.toLowerCase();
+            
+            productCards.forEach(card => {
+                const productName = card.querySelector('h3').textContent.toLowerCase();
+                const productDesc = card.querySelector('.description').textContent.toLowerCase();
+                
+                if (productName.includes(searchTerm) || productDesc.includes(searchTerm)) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
+
+        // Animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animation = 'slideUp 0.6s ease forwards';
+                }
+            });
+        }, observerOptions);
+
+        productCards.forEach(card => {
+            observer.observe(card);
+        });
+    </script>
+</body>
+</html>

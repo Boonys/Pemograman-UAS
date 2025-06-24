@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Parfum Store</title>
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>UhuyStore</h2>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="produk.html" class="nav-link">Produk</a></li>
+                <li><a href="#contact" class="nav-link">Kontak</a></li>
+                <li><a href="#profile" class="nav-link">Profile</a></li>
+                <li><a href="login.html" class="nav-link logout">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Selamat Datang di UhuyStore</h1>
+            <p>Temukan koleksi parfum premium dengan aroma yang akan menyimpan setiap momen spesial Anda</p>
+            <button class="cta-btn" onclick="window.location.href='produk.html'">
+                Jelajahi Produk
+            </button>
+        </div>
+        <div class="hero-image">
+            <div class="perfume-bottle">😎</div>
+        </div>
+    </section>
+
+    <section class="featured-products">
+        <div class="container">
+            <h2>Produk Unggulan</h2>
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-image">🌹</div>
+                    <h3>Zonlitch</h3>
+                    <p>keharuman bunga sakura yang memikat</p>
+                    <span class="price">Rp 75.000</span>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">🌸</div>
+                    <h3>Edelman</h3>
+                    <p>Aroma Vanilla klasik yang elegan</p>
+                    <span class="price">Rp 75.000</span>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">🌺</div>
+                    <h3>Klapfrozen</h3>
+                    <p>Kesegaran tropis yang menyegarkan</p>
+                    <span class="price">Rp 75.000</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2>Hubungi Kami</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <h3>📍 Alamat</h3>
+                        <p>Jl. Gn. maloko No. 123<br>Bogor, Indonesia</p>
+                    </div>
+                    <div class="contact-item">
+                        <h3>📞 Telepon</h3>
+                        <p>+62 895-7062-35083</p>
+                    </div>
+                    <div class="contact-item">
+                        <h3>✉️ Email</h3>
+                        <p>rifkyakmal071@gmail.com</p>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form>
+                        <input type="text" placeholder="Nama Lengkap" required>
+                        <input type="email" placeholder="Email" required>
+                        <textarea placeholder="Pesan Anda" rows="5" required></textarea>
+                        <button type="submit">Kirim Pesan</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="profile" class="profile-section">
+        <div class="container">
+            <h2>Tentang UhuyStore</h2>
+            <div class="profile-content">
+                <div class="profile-text">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus facere odio suscipit sint, nisi possimus veniam pariatur quaerat placeat nemo debitis perferendis qui omnis fugit libero corporis aliquid neque eius!</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea eligendi ducimus cumque pariatur, corrupti nisi autem, rem reiciendis voluptates, in tempora quod officiis eaque eius. Nihil eveniet ut illum blanditiis!</p>
+                    <div class="stats">
+                        <div class="stat-item">
+                            <h3>300+</h3>
+                            <p>Pelanggan Puas</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>11</h3>
+                            <p>Varian Parfum</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>1+</h3>
+                            <p>Tahun Pengalaman</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>@ghniarusll</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling untuk navigasi
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Active navigation highlighting
+        window.addEventListener('scroll', () => {
+            let current = '';
+            const sections = document.querySelectorAll('section');
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (scrollY >= sectionTop - 60) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

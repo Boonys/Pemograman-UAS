@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Parfum Store</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="container">
+        <div class="login-box">
+            <div class="logo">
+                <h1>UhuyStore</h1>
+                <p>Wangi yang Memorable</p>
+            </div>
+            
+            <form class="login-form" id="loginForm">
+                <h2>Masuk ke Akun Anda</h2>
+                
+                <div class="input-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="masukkan email anda" required>
+                </div>
+                
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="masukkan password anda" required>
+                </div>
+                
+                <button type="submit" class="login-btn">Masuk</button>
+                
+                <div class="forgot-password">
+                    <a href="#">Lupa Password?</a>
+                </div>
+                
+                
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            
+            if (email && password) {
+                alert('Login berhasil! Mengarahkan ke halaman utama...');
+                window.location.href = 'home.html';
+            }
+        });
+    </script>
+</body>
+</html>
